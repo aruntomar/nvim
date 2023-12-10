@@ -7,19 +7,17 @@ end
 vim.opt.rtp:prepend(vim.env.LAZY or lazypath)
 
 require("lazy").setup({
-  {import = "plugins"},
-  {import = "plugins/lsp"}
+	{ import = "plugins" },
+	{ import = "plugins/lsp" },
 }, {
-  install = {
-    colorscheme = { "nightfly" },
-  },
-  checker = {
-    enabled = true,
-    notify = false,
-  },
-  change_detection = {
-    notify = false
-  },
+	install = {
+		colorscheme = { "nightfly" },
+	},
+	checker = {
+		enabled = true,
+		notify = false,
+	},
+	change_detection = {
+		notify = false,
+	},
 })
-
-
