@@ -10,6 +10,10 @@ opt.shiftwidth = 2 -- 2 spaces for indent width
 opt.expandtab = true -- expand tab to spaces
 opt.autoindent = true -- copy indent from current line when starting new one
 
+-- Sets how neovim will display certain whitespace characters in the editor
+opt.list = true
+opt.listchars = { tab = ">> ", trail = ".", nbsp = "_" }
+
 -- line wrapping
 opt.wrap = false -- disable line wrapping
 
@@ -20,6 +24,22 @@ opt.smartcase = true -- if you include mixed case in your search, assumes you wa
 -- cursor line
 opt.cursorline = true -- highlight the current cursor line
 
+-- save undo history
+opt.undofile = true
+
+-- decrease update time
+opt.updatetime = 250
+
+-- Descrease mapped sequence wait time
+-- Displays which-key popup sooner
+opt.timeoutlen = 300
+
+-- Preview substitutions live, as you type!
+opt.inccommand = "split"
+
+-- Set highlight on search, but clear on pressing <Esc> in normal mode
+opt.hlsearch = true
+vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<Enter>")
 -- appearance
 
 -- turn on termguicolors for nightfly colorscheme to work
@@ -40,3 +60,6 @@ opt.splitbelow = true -- split horizontal window to the bottom
 
 -- turn off swapfile
 opt.swapfile = false
+
+-- minimum number of screen lines to keep above and below the cursor
+opt.scrolloff = 10
