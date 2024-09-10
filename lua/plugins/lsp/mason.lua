@@ -44,7 +44,7 @@ return {
 				"rust_analyzer",
 				"taplo",
 				"terraformls",
-				"tsserver",
+				"ts_ls",
 				"yamlls",
 			},
 			-- auto-install configured servers (with lspconfig)
